@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Monaco_import";
+  src: url("monaco.ttf");
+}
+
+body {
+  font-family: 'fira code', 'Monaco_import', Monaco, Menlo, Consolas, Arial;
+}
+ul li {
+  cursor: pointer;
+}
+.complete {
+  text-decoration: line-through;
+}
+#update_div {
+  display: none;
+}
+input {
+  font-family: 'fira code', Monaco, Menlo, Consolas, Arial;
+  padding: 10px;
+  font-size: 16px;
+}
+button {
+  border: 1px solid paleturquoise;
+  background: tomato;
+  color: white;
+  font-size: 16px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+button.delete {
+  background: tomato;
+  border: 1px solid skyblue;
+  color: white;
+}
+button.edit {
+  border: 1px solid salmon;
+  background: seagreen;
+  color: white;
+}
+button:active, button:focus {
+  outline: none;
+}
+li {
+  margin-bottom: 5px;
+}
+
+input:focus {
+  outline: none;
+}
