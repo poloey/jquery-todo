@@ -40,6 +40,12 @@ if (localStorage.getItem('todos') === null) {
 //functions
 function readTodo () {
     var todos = store();
+    if (! todos.length) {
+        console.log('todos length', todos.length);
+        console.log('hello');
+        todoUl.html("<h2 class='red'>You don't have any todo</h2>")
+        return true;
+    }
     var todoList = todos.map(function (todo) {
         if (todo.complete) {
             return `

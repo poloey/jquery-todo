@@ -16,6 +16,9 @@ body {
   padding: 15px;
 
 }
+.red {
+  color: crimson;
+}
 ul li {
   cursor: pointer;
 }
