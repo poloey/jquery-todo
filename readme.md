@@ -8,6 +8,8 @@ following 6 task you have to do in order to create this todo
 * Update a todo
 * Delete a todo
 
+# jQuery todo Applicaion with persistant data   
+In html 5 we can use `localStorage` api. By using local storage we are able to store our data in our browser. There are 2 script file in this repo. `script.js` is just plain todo app. `script_store.js` is for persistant todo app. I mean if you reaload page still your created todo will be in the page. 
 ### Read todos
 Here I have used array `map` function to iterate through array and generate li item.
 ~~~js
