@@ -65,8 +65,8 @@ readTodo();
 function createTodo () {
     var todos = store();
     var id = 1;
-    if (todos) {
-       id = todos[todos.length - 1].id + 1;
+    if (todos && todos.length >= 1) {
+       id = todos[todos.length - 1].id || 0 + 1;
     }
     if (create_input.val().length > 2) {
         var text = create_input.val();
@@ -79,7 +79,12 @@ function createTodo () {
         text: create_input.val(),
         complete: false
     }
-    todos.push(todo);
+    if (todos) {
+        todos.push(todo);
+    } else {
+        todos = [];
+        todos.push(todo);
+    }
     store(todos);
     readTodo();
     create_input.val('');
