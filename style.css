@@ -35,11 +35,19 @@ button.delete {
 }
 button.edit {
   border: 1px solid salmon;
-  background: seagreen;
+  background: cadetblue;
   color: white;
 }
 button:active, button:focus {
   outline: none;
+}
+button#update_btn {
+  padding: 10px;
+  background: steelblue;
+}
+button#create_btn {
+  padding: 10px;
+  background: palevioletred;
 }
 li {
   margin-bottom: 5px;
