@@ -64,6 +64,10 @@ readTodo();
 
 function createTodo () {
     var todos = store();
+    var id = 1;
+    if (todos) {
+       id = todos[todos.length - 1].id + 1;
+    }
     if (create_input.val().length > 2) {
         var text = create_input.val();
     }else {
@@ -71,7 +75,7 @@ function createTodo () {
         return true;
     }
     var todo = {
-        id: todos[todos.length - 1].id + 1,
+        id: id,
         text: create_input.val(),
         complete: false
     }
