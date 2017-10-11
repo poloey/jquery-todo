@@ -3,8 +3,18 @@
   src: url("monaco.ttf");
 }
 
+
 body {
   font-family: 'fira code', 'Monaco_import', Monaco, Menlo, Consolas, Arial;
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  width: 80%;
+  margin: 20px auto;
+  background: beige;
+  padding: 15px;
+
 }
 ul li {
   cursor: pointer;

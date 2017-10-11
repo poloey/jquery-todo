@@ -127,27 +127,45 @@ function updateTodo() {
 }
 
 /// events 
+
+/**
+ * todo create event
+ */
 create_input.on('keypress', function (e){
     if (e.keyCode == 13) {
         createTodo();
     }
 })
 create_btn.on('click', createTodo);
+
+/**
+ * todo completion event
+ */
 todoUl.on('click', 'li span', function(e) {
     var todo_id = e.target.parentElement.dataset.value || e.currentTarget.parentElement.dataset.value;
     toggleCompletion(todo_id);
 })
 
+
+/**
+ * todo edit and update event
+ */
 todoUl.on('click', 'li button.edit', function (e) {
     console.log('e', e);
     
     editTodo(e.target.value);
 })
 
-todoUl.on('click', 'li button.delete', function (e) {
-    deleteTodo(e.target.value);
+update_btn.on('click', updateTodo);
+update_input.on('keypress', function (e){
+    if (e.keyCode == 13) {
+        updateTodo();
+    }
 })
 
-update_btn.on('click', function () {
-    updateTodo();
+/**
+ * todo delete event
+ */
+todoUl.on('click', 'li button.delete', function (e) {
+    deleteTodo(e.target.value);
 })

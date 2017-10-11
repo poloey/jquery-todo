@@ -8,20 +8,22 @@
     <link rel="stylesheet" href="style.css">    
 </head>
 <body>
-    <h1>All todos (You can toggle todo completion on todo click)</h1>
-    <ul id="todo">
-        <li>go to market</li>
-        <li>clean the room</li>
-        <li>purchase grocery</li>
-    </ul>
+    <div class="wrapper">
+        <h1>All todos - You can toggle todo completion on todo click </h1>
+        <ul id="todo">
+            <li>go to market</li>
+            <li>clean the room</li>
+            <li>purchase grocery</li>
+        </ul>
 
-    <div id="update_div">
-        <h1>Update Todo</h1>
-        <input value="Go to market" id="update_input" type="text"> <button id="update_btn">Update new Todo</button>
+        <div id="update_div">
+            <h1>Update Todo</h1>
+            <input value="Go to market" id="update_input" type="text"> <button id="update_btn">Update new Todo</button>
+        </div>
+
+        <h1>Create Todo</h1>
+        <input id="create_input" type="text"> <button id="create_btn">Add new Todo</button>
     </div>
-
-    <h1>Create Todo</h1>
-    <input id="create_input" type="text"> <button id="create_btn">Add new Todo</button>
 
     <script src="jquery.js"></script>
     <script src="script.js"></script>
