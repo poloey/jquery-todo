@@ -93,15 +93,6 @@ function editTodo (id) {
     update_input.attr('data-id', todo.id);
 }
 
-function deleteTodo (id) {
-    var todoIndex = todos.findIndex(function (todo) {
-        todo.id == id;
-    }) 
-    if (confirm('Are you really want to delete this todo')) {
-        todos.splice(todoIndex, 1);
-    }
-    readTodo();
-}
 
 function updateTodo() {
     if (update_input.val().length > 2) {
@@ -126,6 +117,15 @@ function updateTodo() {
     update_div.hide();
 }
 
+function deleteTodo (id) {
+    var todoIndex = todos.findIndex(function (todo) {
+        todo.id == id;
+    }) 
+    if (confirm('Are you really want to delete this todo')) {
+        todos.splice(todoIndex, 1);
+    }
+    readTodo();
+}
 /// events 
 
 /**
@@ -148,7 +148,7 @@ todoUl.on('click', 'li span', function(e) {
 
 
 /**
- * todo edit and update event
+ * todo edit event
  */
 todoUl.on('click', 'li button.edit', function (e) {
     console.log('e', e);
@@ -156,6 +156,9 @@ todoUl.on('click', 'li button.edit', function (e) {
     editTodo(e.target.value);
 })
 
+/**
+ * todo update event
+ */
 update_btn.on('click', updateTodo);
 update_input.on('keypress', function (e){
     if (e.keyCode == 13) {
