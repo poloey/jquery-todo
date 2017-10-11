@@ -1,6 +1,6 @@
 # jquery todo Application
 I build a todo crud application using javaScript dom library jquery.    
-It has 4 features.
+following 6 task you have to do in order to create this todo
 * can read todos
 * can create todo
 * can toggle completion of a todo
