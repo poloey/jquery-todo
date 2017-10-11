@@ -41,8 +41,6 @@ if (localStorage.getItem('todos') === null) {
 function readTodo () {
     var todos = store();
     if (! todos.length) {
-        console.log('todos length', todos.length);
-        console.log('hello');
         todoUl.html("<h2 class='red'>You don't have any todo</h2>")
         return true;
     }
@@ -117,7 +115,6 @@ function editTodo (id) {
     var todo = todos.find(function (todo) {
         return todo.id == id;
     })
-    console.log('todo', todo);
 
     if (update_div.is(':hidden')) {
         update_div.show();
@@ -188,7 +185,6 @@ todoUl.on('click', 'li span', function(e) {
  * todo edit event
  */
 todoUl.on('click', 'li button.edit', function (e) {
-    console.log('e', e);
     
     editTodo(e.target.value);
 })
