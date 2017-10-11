@@ -33,7 +33,7 @@ function store (todos) {
         return JSON.parse(todoString);
     }
 }
-if (localStorage.getItem('todos' === null)) {
+if (localStorage.getItem('todos') === null) {
     store(initialTodos);
 }
 
