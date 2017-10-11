@@ -1,14 +1,14 @@
 # jquery todo Application
 I build a todo crud application using javaScript dom library jquery.    
 following 6 task you have to do in order to create this todo
-* can read todos
-* can create todo
-* can toggle completion of a todo
-* can edit a todo
-* can update a todo
-* can Delete a todo
+* Read todos
+* Create todo
+* Toggle completion of a todo
+* Edit a todo
+* Update a todo
+* Delete a todo
 
-### read todos
+### Read todos
 Here I have used array `map` function to iterate through array and generate li item.
 ~~~js
 var todoUl = $('ul#todo');
@@ -58,7 +58,7 @@ function readTodo () {
 readTodo();
 ~~~
 
-### create todo
+### Create todo
 using `val()`  function we are able to get text box value, We are using `keypress` event to track user typing. Here code is self explanatory    
 ~~~js
 var create_input = $('#create_input');
@@ -90,7 +90,7 @@ create_input.on('keypress', function (e){
 create_btn.on('click', createTodo);
 ~~~
 
-### can toggle completion of a todo
+### Toggle completion of a todo
 `findIndex` function return index of array. `splice` take 3 arguments. first arguments is start index, 2nd arguments is how many index will be deleted, 3rd arguments is new value. 
 on function take 2 or 3 parameters. In following code 2nd parameter is for specific target.  `dataset` use for retrieving value from data attribute.
 ~~~js
